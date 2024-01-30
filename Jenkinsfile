@@ -26,9 +26,9 @@ pipeline {
             }
         }
         stage (" Action") {
-            // steps {
-               // sh 'terraform ${action} --auto-approve' 
-          // }
+             steps {
+                sh 'terraform ${action} --auto-approve' 
+           }
         }
         stage("Deploy to EKS") {
             //when {
